@@ -1,41 +1,31 @@
 import java.util.Scanner;
 
 public class readRealNumbers {
+    private Scanner scn = new Scanner(System.in);
+
     public static void main(String[] args) {
         readRealNumbers programa = new readRealNumbers();
         programa.inici();
     }
 
     public void inici() {
-        System.out.print("enter the number with kerboard:");
+        System.out.print("Enter a number from keyboard: ");
         double a = numberEntered();
-        System.out.println("entered number is " + a + ".");
-        System.out.print("Enter another number from keyboeard: ");
+        System.out.println("Entered number is " + a + ".");
+
+        System.out.print("Enter another number from keyboard: ");
         a = numberEntered();
-    System.out.println("the other number is " + a + ".");
+        System.out.println("The other number is " + a + ".");
     }
 
     public double numberEntered() {
-        Scanner scn = new Scanner(System.in);
-        double numberEntered = 0;
-        boolean read = false;
-        while (!read) {
-            read = scn.hasNextDouble();
-            if (read) {
-                numberEntered = scn.nextDouble();
+        while (true) {
+            if (scn.hasNextDouble()) {
+                return scn.nextDouble();
             } else {
-                System.out.println("This is not an Real number(Double).");
+                System.out.println("This is not a real number (Double). Try again:");
                 scn.next();
             }
         }
-
-        while (!scn.hasNextDouble()) {
-                System.out.println("This is not an Real number(Double).");
-                scn.next();
-        }
-
-        scn.nextLine();
-        numberEntered=scn.nextDouble();
-        return numberEntered;
     }
 }
