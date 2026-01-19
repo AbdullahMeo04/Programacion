@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class CalculArees_Mod1 {
     Scanner scn = new Scanner(System.in);
+    private double area = 0;
 
     public static void main(String[] args) {
         CalculArees_Mod1 Programa = new CalculArees_Mod1();
@@ -23,6 +24,9 @@ public class CalculArees_Mod1 {
 
             switch (shape.toLowerCase()) {
                 case "circle":
+                    //ask for scaaner function : made by yourself
+                    //double area_of_circle = areaOfShapes.areaOfCircle(radius);
+                    //area = areaOfShapes.areaOfCircle();
                     double area_of_circle = areaOfShapes.areaOfCircle();
                     System.out.println("Area of the circle is: " + area_of_circle);
                     break;
@@ -50,6 +54,7 @@ public class CalculArees_Mod1 {
                 default:
                     System.out.println("Shape not implemented yet.");
             }
+            //sout(the area of + shape + is + area)
 
             System.out.println();
         }

@@ -79,6 +79,8 @@ import java.util.Scanner;
 
 public class CalculArees_Mod {
 
+    private boolean fi = false;
+
     Scanner scn = new Scanner(System.in);
     private double area = 0;
 
@@ -88,10 +90,8 @@ public class CalculArees_Mod {
     }
 
     public void inici() {
-        while (true) {
-            System.out.print(
-                "Enter a shape (triangle, circle, trapezoid, rhombus, parallelogram) or 'fi' to exit: "
-            );
+        while (true) { //need to change it --> fi
+            System.out.print("Enter a shape (triangle, circle, trapezoid, rhombus, parallelogram) or 'fi' to exit: ");
             String shape = scn.nextLine().toLowerCase();
 
             switch (shape) {
@@ -121,6 +121,7 @@ public class CalculArees_Mod {
                     break;
 
                 case "fi":
+                    fi = true;
                     System.out.println("Program finished.");
                     scn.close();
                     return;
@@ -129,10 +130,15 @@ public class CalculArees_Mod {
                     System.out.println("Please select from the given shapes!");
             }
 
-            // Clear buffer after nextDouble()
             scn.nextLine();
             System.out.println();
         }
+    }
+
+    public void area_of_circle() {
+        System.out.print("Enter the radius: ");
+        double radius = scn.nextDouble();
+        area = Math.PI * radius * radius;
     }
 
     public void area_of_triangle() {
@@ -143,11 +149,6 @@ public class CalculArees_Mod {
         area = 0.5 * base * height;
     }
 
-    public void area_of_circle() {
-        System.out.print("Enter the radius: ");
-        double radius = scn.nextDouble();
-        area = Math.PI * radius * radius;
-    }
 
     public void area_of_trapezoid() {
         System.out.print("Enter the larger base: ");
