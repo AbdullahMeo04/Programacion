@@ -25,6 +25,6 @@ class Discount_and_penalty {
 		}
 
 		System.out.println("El preu final es: " + Final_price);
-
+		raw.close();
 	}
 }

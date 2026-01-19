@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PE_AEA1{
+public class dinamica{
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		double discount;
@@ -27,6 +27,7 @@ public class PE_AEA1{
 			sum = sum + actual_price;
 		}
 		System.out.print("\nprint sum; "+ sum);
+		scn.close();
 	}
 }
 
