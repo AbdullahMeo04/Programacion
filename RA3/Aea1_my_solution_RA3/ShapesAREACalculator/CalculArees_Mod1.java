@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class CalculArees_Mod1 {
     Scanner scn = new Scanner(System.in);
+    private double area = 0;
 
     public static void main(String[] args) {
         CalculArees_Mod1 Programa = new CalculArees_Mod1();
@@ -10,48 +11,45 @@ public class CalculArees_Mod1 {
 
     public void inici() {
         bawag areaOfShapes = new bawag();
+        boolean FI = false;
 
-        while (true) {
-            System.out.print(
-                    "Enter a shape (triangle, circle, trapezoid, rhombus, parallelogram) or type FI to finish: ");
+        while (!FI) {
+            System.out.print("Enter a shape (triangle, circle, trapezoid, rhombus, parallelogram) ONLY typing FI to finish loop: ");
             String shape = scn.nextLine().toLowerCase();
 
             if (shape.equalsIgnoreCase("FI")) {
+                FI = true;
                 System.out.println("Program finished.");
                 break;
             }
 
             switch (shape.toLowerCase()) {
                 case "circle":
-                    double area_of_circle = areaOfShapes.areaOfCircle();
-                    System.out.println("Area of the circle is: " + area_of_circle);
+                    area = areaOfShapes.areaOfCircle();
                     break;
-
                 case "triangle":
-                    double area_of_triangle = areaOfShapes.areaOfTriangle();
-                    System.out.println("Area of the trianlge is: " + area_of_triangle);
+                    area = areaOfShapes.areaOfTriangle();
                     break;
-
                 case "trapezoid":
-                    double area_of_trapezoid = areaOfShapes.areaOfTrapezoid();
-                    System.out.println("Area of the trapezoid is: " + area_of_trapezoid);
+                    area = areaOfShapes.areaOfTrapezoid();
                     break;
-
                 case "rhombus":
-                    double area_of_rhumbus = areaOfShapes.areaOfRhombus();
-                    System.out.println("Area of the rhumbus is: " + area_of_rhumbus);
+                    area = areaOfShapes.areaOfRhombus();
                     break;
-
                 case "parallelogram":
-                    double area_of_parallelogram = areaOfShapes.areaOfParallelogram();
-                    System.out.println("Area of the rhumbus is: " + area_of_parallelogram);
+                    area = areaOfShapes.areaOfParallelogram();
                     break;
-
                 default:
                     System.out.println("Shape not implemented yet.");
             }
 
+        System.out.println("Area of the " + shape + " is = " + area);
             System.out.println();
         }
     }
 }
+
+// ask for scaaner function : made by yourself
+// double area_of_circle = areaOfShapes.areaOfCircle(radius);
+// area = areaOfShapes.areaOfCircle();
+// sout(the area of + shape + is + area)
