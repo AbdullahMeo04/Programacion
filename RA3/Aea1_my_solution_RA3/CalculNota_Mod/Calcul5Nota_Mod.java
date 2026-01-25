@@ -49,7 +49,6 @@ public class Calcul5Nota_Mod {
                 }
             }
         }
-        scanner.close();
         return numbers;
     }
 
