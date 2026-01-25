@@ -1,4 +1,4 @@
-package AEA3.Exemples_AEA3_1.RegistreTemperatures;
+// package AEA3.Exemples_AEA3_1.RegistreTemperatures;
 
 public class RegistreTemperatures_PART1SOL {
   //Constants

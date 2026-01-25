@@ -1,5 +1,3 @@
-package Primer.UF2.RegistreNotes;
-
 public class RegistreNotes {
   public static void main(String[] args) {
     RegistreNotes programa = new RegistreNotes();

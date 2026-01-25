@@ -1,5 +1,3 @@
-package Primer.UF2.RegistreNotes;
-
 public class CalculsArrayReals {
   public double calcularMaxim(double[] array) {
     double max = array[0];
