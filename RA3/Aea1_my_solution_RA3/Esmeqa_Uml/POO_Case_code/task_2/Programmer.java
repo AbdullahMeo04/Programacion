@@ -9,6 +9,6 @@ public class Programmer extends Employee {
     }
 
     public void debug(){
-        System.out.println(getnombre() + "is debugging the system.");
+        System.out.println(getnombre() + " is debugging the system.");
     }
 }
