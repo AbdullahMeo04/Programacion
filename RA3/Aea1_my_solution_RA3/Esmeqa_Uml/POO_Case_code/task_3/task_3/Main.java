@@ -96,7 +96,6 @@ public class Main {
     public static void main(String[] args) {
 
         Triangle triangle = new Triangle(24, 23);
-
         Quadrat quadrat = new Quadrat(3);
         Rectangle rectangle = new Rectangle();
         rectangle.setCostat1(6);
