@@ -40,9 +40,7 @@ public abstract class Figura {
     }
 
     public abstract double calcularArea();
-
     public abstract void llegirDades(Scanner sc);
-
     public static int seguentFigura() {
         return comptadorId++;
     }
