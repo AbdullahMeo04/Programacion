@@ -1,4 +1,4 @@
-package UF3.Examen_v2;
+package UF2.Examen_v2;
 
 public class CalculArrays {
     //Param. entr: array de notes (double[])
