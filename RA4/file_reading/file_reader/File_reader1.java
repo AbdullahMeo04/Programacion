@@ -20,7 +20,6 @@ public class InvertFile {
 
             Scanner scn = new Scanner(inputFile);
             FileWriter writer = new FileWriter("arxiu_invertit.txt");
-
             while (scn.hasNextLine()) {
                 String line = scn.nextLine();
                 String reversed = new StringBuilder(line).reverse().toString();
