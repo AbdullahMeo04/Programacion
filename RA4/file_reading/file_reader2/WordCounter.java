@@ -29,7 +29,7 @@ public class WordCounter {
 
     public static void writeFile(String fileName, int count) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName, false))) {
-            writer.println("Total words: " + count);
+            writer.println("The file has " + count + " Words.");
             System.out.println("Process finished successfully.");
         } catch (IOException e) {
             System.out.println("An error occurred during writing.");
